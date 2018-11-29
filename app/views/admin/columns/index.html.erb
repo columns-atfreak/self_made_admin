@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Columns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_columns.each do |admin_column| %>
+      <tr>
+        <td><%= link_to 'Show', admin_column %></td>
+        <td><%= link_to 'Edit', edit_admin_column_path(admin_column) %></td>
+        <td><%= link_to 'Destroy', admin_column, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Column', new_admin_column_path %>
